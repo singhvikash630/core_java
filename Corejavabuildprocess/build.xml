@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="constructor" default="task1" basedir="D:\JAVA\workspace\buildprocess\src\com\jspider">
+
+<target name="task1" depends="task2">
+<echo>BUILD PROCESS</echo>
+<javac srcdir="${basedir}\constructor" destdir="${basedir}\build" /> 
+</target>
+
+<target name="task2" depends="task3">
+<echo>MAKE DIRECTORY</echo>
+<mkdir dir="${basedir}\build" /> 
+</target>
+<target name="task3">
+<echo>REMOVE DIRECTORY</echo>
+<delete dir="${basedir}\build" /> 
+</target>
+</project>
